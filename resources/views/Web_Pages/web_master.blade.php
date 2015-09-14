@@ -16,30 +16,25 @@
     <link href="Web/css/main.css" rel="stylesheet">
     <link href="Web/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
-
     <script src="Web/js/html5shiv.js"></script>
     <script src="Web/js/respond.min.js"></script>
-
-    <script src="js/ajax.js" type="text/javascript"></script>
     <![endif]-->
     <link rel="shortcut icon" href="Web/images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Web/images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Web/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Web/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="Web/images/ico/apple-touch-icon-57-precomposed.png">
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head><!--/head-->
 
-<body class="homepage"  onload="testonload()">
+<body class="homepage">
 
     <header id="header">
         <div class="top-bar">
             <div class="container">
                 <div class="row">
-                    @yield('phone_no')
-
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +94011 244 50 39</p></div>
+                    </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
                             <ul class="social-share">
@@ -83,9 +78,6 @@
         @yield('rece_work')
         @yield('product')
         @yield('forgot')
-        @yield('new_product')
-        @yield('pro_content')
-
 
 
 
@@ -102,8 +94,8 @@
                             <i class="fa fa-phone"></i>
                         </div>
                         <div class="media-body">
-                            <h2>Want to know more ?</h2>
-                            <p>experience heavenly comfort clothings at Adora Apparals. If you have any issues contact with us 07750394039 </p>
+                            <h2>Have a question or need a custom quote?</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70 80</p>
                         </div>
                     </div>
                 </div>

@@ -15,8 +15,8 @@ return [
     |
     */
 
-//    'driver' => env('MAIL_DRIVER', 'smtp'),
     'driver' => 'smtp',
+
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -28,7 +28,6 @@ return [
     |
     */
 
- //  'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
     'host' =>  'smtp.gmail.com',
 
     /*
@@ -42,7 +41,6 @@ return [
     |
     */
 
-    //'port' => env('MAIL_PORT', 587),
     'port' => 465,
 
     /*
@@ -56,7 +54,6 @@ return [
     |
     */
 
-    //'from' => ['address' => null, 'name' => null],
     'from' => array('address' => 'paidvertz@gmail.com', 'name' => 'Adora Apparels'),
 
     /*
@@ -70,7 +67,6 @@ return [
     |
     */
 
-  //  'encryption' => env('MAIL_ENCRYPTION', 'tls'),
     'encryption' => 'ssl',
 
     /*
@@ -84,7 +80,6 @@ return [
     |
     */
 
-    //'username' => env('MAIL_USERNAME'),
     'username' => 'paidvertz@gmail.com',
 
     /*
@@ -98,7 +93,6 @@ return [
     |
     */
 
-   // 'password' => env('MAIL_PASSWORD'),
     'password' => 'sivan550',
 
     /*
@@ -112,9 +106,7 @@ return [
     |
     */
 
-    //'sendmail' => '/usr/sbin/sendmail -bs',
     'sendmail' => '/usr/sbin/sendmail -bs',
-
 
     /*
     |--------------------------------------------------------------------------

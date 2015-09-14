@@ -12,7 +12,7 @@
 */
 
 Route::get('/','PagesController@home_page');
-Route::get('about','PagesController@about');
+//Route::get('about','PagesController@about');
 Route::get('contact','PagesController@contact');
 Route::get('new','PagesController@new_page');
 Route::get('cover','PagesController@cover_page');
@@ -29,19 +29,16 @@ Route::get('check','PagesController@check');
 Route::get('master','PagesController@master_admin_con');
 Route::get('cover_page','PagesController@showCover_page');
 Route::get('admin_contact','PagesController@showContact_page');
+Route::get('new_Contact','PagesController@new_Contact');
 Route::get('admin_about','PagesController@showAbout_page');
 Route::get('admin_contant','PagesController@showContant_page');
-Route::get('admin_user','PagesController@showUser_page');
-Route::get('main','PagesController@main_page');
-Route::get('product','PagesController@product_page');
-Route::get('forgot','PagesController@forgot_page');
-Route::get('pass_error','PagesController@pass_page');
-Route::get('browse_product','PagesController@browse_product');
-Route::get('mail_box','PagesController@showMailbox_page');
+Route::get('ducks','PagesController@ducks');
 Route::post('login_con','FormController@login_con');
-Route::post('contact_change','FormController@contact_change');
-Route::post('slider_change','FormController@slider_image');
-Route::post('email_pass','FormController@email_pass');
+Route::post('new_Contact','ContactController@handleFormPost');
+Route::post('admin_contact', 'ContactController@Update');
+Route::get('front_about','PagesController@front_about');
+Route::post('home_about','PagesController@about_add');
+//Route::post('upload','ContactController@Upload');
 
 
 

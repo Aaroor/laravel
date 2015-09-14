@@ -31,8 +31,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="js/ajax.js" type="text/javascript"></script>
-
-
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -105,7 +103,7 @@ desired effect
                                 <a href="#" class="btn btn-default btn-flat">Chane Profile</a>
                             </div>
                             <div class="pull-right">
-                             <a href="/main" class="btn btn-success">Sign out</a>
+                             <a href="check" class="btn btn-success">Sign out</a>
 
                             </div>
                         </li>
@@ -175,8 +173,7 @@ desired effect
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-
-       <h1>
+        <h1>
             Page Header
             <small>Optional description</small>
         </h1>
@@ -187,11 +184,9 @@ desired effect
     </section>
 
     <!-- Main content -->
-
     <section class="content" style="background-color: #ffffff">
 
         <!-- Your Page Content Here -->
-        @yield('mail')
         @yield('content')
 
     </section><!-- /.content -->
@@ -277,106 +272,12 @@ desired effect
 <script src="Admin/plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
 <!-- Bootstrap 3.3.2 JS -->
 <script src="Admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-
+<!-- AdminLTE App -->
+<script src="Admin/dist/js/app.min.js" type="text/javascript"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
       user experience. Slimscroll is required when using the
       fixed layout. -->
-      <!--Script-->
-      <!-- jQuery 2.1.4 -->
-
-
-          <!-- Select2 -->
-          <script src="Admin/plugins/select2/select2.full.min.js" type="text/javascript"></script>
-          <!-- InputMask -->
-          <script src="Admin/plugins/input-mask/jquery.inputmask.js" type="text/javascript"></script>
-          <script src="Admin/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
-          <script src="Admin/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
-          <!-- date-range-picker -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js" type="text/javascript"></script>
-          <script src="Admin/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
-          <!-- bootstrap color picker -->
-          <script src="Admin/plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
-          <!-- bootstrap time picker -->
-          <script src="Admin/plugins/timepicker/bootstrap-timepicker.min.js" type="text/javascript"></script>
-          <!-- SlimScroll 1.3.0 -->
-          <script src="Admin/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-          <!-- iCheck 1.0.1 -->
-          <script src="Admin/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
-          <!-- FastClick -->
-          <script src="Admin/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
-          <!-- AdminLTE App -->
-          <script src="Admin/dist/js/app.min.js" type="text/javascript"></script>
-          <!-- AdminLTE for demo purposes -->
-          <script src="Admin/dist/js/demo.js" type="text/javascript"></script>
-
-       <!-- Page script -->
-          <script type="text/javascript">
-            $(function () {
-              //Initialize Select2 Elements
-              $(".select2").select2();
-
-              //Datemask dd/mm/yyyy
-              $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-              //Datemask2 mm/dd/yyyy
-              $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
-              //Money Euro
-              $("[data-mask]").inputmask();
-
-              //Date range picker
-              $('#reservation').daterangepicker();
-              //Date range picker with time picker
-              $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
-              //Date range as a button
-              $('#daterange-btn').daterangepicker(
-                      {
-                        ranges: {
-                          'Today': [moment(), moment()],
-                          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                          'This Month': [moment().startOf('month'), moment().endOf('month')],
-                          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                        },
-                        startDate: moment().subtract(29, 'days'),
-                        endDate: moment()
-                      },
-              function (start, end) {
-                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-              }
-              );
-
-              //iCheck for checkbox and radio inputs
-              $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                checkboxClass: 'icheckbox_minimal-blue',
-                radioClass: 'iradio_minimal-blue'
-              });
-              //Red color scheme for iCheck
-              $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                checkboxClass: 'icheckbox_minimal-red',
-                radioClass: 'iradio_minimal-red'
-              });
-              //Flat red color scheme for iCheck
-              $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-                checkboxClass: 'icheckbox_flat-green',
-                radioClass: 'iradio_flat-green'
-              });
-
-              //Colorpicker
-              $(".my-colorpicker1").colorpicker();
-              //color picker with addon
-              $(".my-colorpicker2").colorpicker();
-
-              //Timepicker
-              $(".timepicker").timepicker({
-                showInputs: false
-              });
-            });
-          </script>
-          @yield('script1')
-          @yield('script2')
-          @yield('script3')
-          @yield('script4')
 </body>
 </html>

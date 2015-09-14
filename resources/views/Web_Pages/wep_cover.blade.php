@@ -71,10 +71,11 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="/front_about">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="/new_Contact">Contact Us</a></li>
 
-                        <li><a href="contact-us.html">Contact</a></li>
+
                         <li class="dropdown" >
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  Admin Login <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -783,7 +784,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Faq</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="/new_Contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>

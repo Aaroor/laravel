@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Admin;
-use DB;
+use App\Contact;
 use Illuminate\Support\Facades\Session;
 use Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Contact_Image;
 
 class PagesController extends Controller
 {
@@ -46,6 +47,12 @@ class PagesController extends Controller
     {
         return view('Pages.contact');
     }
+    public function new_Contact()
+    {
+        $details = Contact::find(1);
+        $img = Contact_Image::find(1);
+        return view('Web_Pages.new_Contact',compact('details','img'));
+    }
     public function forget_page()
     {
         return view('Pages.forget');
@@ -84,7 +91,7 @@ class PagesController extends Controller
     //    $value= Admin::all();
       //  return view('check',compact('value'));
 
-        return view('Web_Pages.cover');
+        return view('Web_Pages.wep_cover');
 
      //   return $value;
 
@@ -94,7 +101,10 @@ class PagesController extends Controller
         return view('check');
     }
 
-
+    public function ducks()
+    {
+        return view('Web_Pages.ducks');
+    }
     public function master_admin_con()
     {
 
@@ -104,12 +114,7 @@ class PagesController extends Controller
     public function showCover_page()
     {
 
-        $values=DB::table('phonecontact')
-            ->where('id','=',1)
-            ->first();
-
-        return view('Admin_Pages.Admin_cover',compact('values'));
-
+        return view('Admin_Pages.Admin_cover');
     }
     public function showAbout_page()
     {
@@ -117,49 +122,33 @@ class PagesController extends Controller
     }
     public function showContact_page()
     {
-        return view('Admin_Pages.Admin_contact');
+        $details_admin = Contact::find(1);
+        $img = Contact_Image::find(1);
+        return view('Admin_Pages.Admin_contact',compact('details_admin','img'));
     }
     public function showContant_page()
     {
         return view('Admin_Pages.Admin_contant');
     }
-    public function showUser_page()
+
+    public function front_about()
     {
-        return view('Admin_Pages.Admin_user_control');
+        $about = about::all();
+        return view('Web_Pages.front_about',compact('about'));
     }
 
-    public function browse_product()
+    public function about_add()
     {
-        return view('Web_Pages.product_view');
-    }
+        $input = Request::all();
+        $des = $input['about'];
 
-    public function main_page()
-    {
+        $About = new about();
+        $About->about = $des;
 
-        $values=DB::table('phonecontact')
-            ->where('id','=',1)
-            ->first();
-
-        return view('Web_Pages.cover',compact('values'));
-      //  return view('Web_Pages.cover');
+        if($About->save())
+            Session::flash('message','Successfully added');
+        return view('Admin_Pages.Admin_about');
     }
-    public function product_page()
-    {
-        return view('Web_Pages.product');
-    }
-    public function forgot_page()
-    {
-        return view('Web_Pages.forgot');
-    }
-    public function pass_page()
-    {
-        return view('Web_Pages.password_error');
-    }
-    public function showMailbox_page()
-    {
-        return view('Admin_Pages.Mailbox');
-    }
-
 
 
 }

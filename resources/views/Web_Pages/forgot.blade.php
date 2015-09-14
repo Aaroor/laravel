@@ -47,17 +47,17 @@
              <div class="row" style="margin-top:0px;padding-top:0px">
 
                  <div class="col-sm-8 col-md-6">
-                     <div class="media services-wrap wow fadeInDown"  style="background-color:#d7d8d7">
+                     <div class="media services-wrap wow fadeInDown"  style="background-color: #d7d8d7">
                                {!!Form::open(['action'=>'FormController@email_pass', 'method'=>'POST'])!!}
                                      <div class="form-group">
                                        {!!Form::label('exampleInputEmail1','Enter Admin Email address:')!!}
-                                       {!!Form::email('exampleInputEmail1',null,['class'=>'form-control','placeholder'=>'Email'])!!}
+                                       {!!Form::email('exampleInputEmail1',null,['class'=>'form-control','placeholder'=>'Email
                                      </div>
-                                     {!!Form::submit('Submit',['class'=>'btn btn-success'])!!}
+                                     {!!Form::submit('Sign in',['class'=>'btn btn-success'])!!}
                                {!!Form::close()!!}
                      <div>
                  </div>
              </div><!--/.row-->
        </div><!--/.container-->
-    </section>
+    </section><!--/#services-->
 @stop
